@@ -45,32 +45,51 @@ namespace Module1
         //    // Formula: Area = 0.5 * baseLength * height
         //    return 0.5 * baseLength * height;
         //}
+        //static void Main(string[] args)
+        //{
+        //    Console.Write("Enter the length of the rectangle: ");
+        //    if (double.TryParse(Console.ReadLine(), out double length) && length > 0)
+        //    {
+        //        Console.Write("Enter the width of the rectangle: ");
+        //        if (double.TryParse(Console.ReadLine(), out double width) && width > 0)
+        //        {
+        //            double area = CalculateRectangleArea(length, width);
+        //            Console.WriteLine($"The area of the rectangle with length {length} and width {width} is: {area}");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("Invalid input. Please enter a positive number for the width.");
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("Invalid input. Please enter a positive number for the length.");
+        //    }
+        //}
+
+        //static double CalculateRectangleArea(double length, double width)
+        //{
+        //    // Formula: Area = Length × Width
+        //    return length * width;
+        //}
         static void Main(string[] args)
         {
-            Console.Write("Enter the length of the rectangle: ");
-            if (double.TryParse(Console.ReadLine(), out double length) && length > 0)
+            Console.Write("Enter the side length of the square: ");
+            if (double.TryParse(Console.ReadLine(), out double side) && side > 0)
             {
-                Console.Write("Enter the width of the rectangle: ");
-                if (double.TryParse(Console.ReadLine(), out double width) && width > 0)
-                {
-                    double area = CalculateRectangleArea(length, width);
-                    Console.WriteLine($"The area of the rectangle with length {length} and width {width} is: {area}");
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter a positive number for the width.");
-                }
+                double area = CalculateSquareArea(side);
+                Console.WriteLine($"The area of the square with side length {side} is: {area}");
             }
             else
             {
-                Console.WriteLine("Invalid input. Please enter a positive number for the length.");
+                Console.WriteLine("Invalid input. Please enter a positive number for the side length.");
             }
         }
 
-        static double CalculateRectangleArea(double length, double width)
+        static double CalculateSquareArea(double side)
         {
-            // Formula: Area = Length × Width
-            return length * width;
+            // Formula: Area = Side × Side
+            return side * side;
         }
     }
 }
